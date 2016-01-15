@@ -99,7 +99,7 @@ static void onMouse( int event, int x, int y, int f, void* ){
 
 
 int main(){
-    src = imread("/Users/Ornicha/Desktop/image/pill3.jpg",1);
+    src = imread("/Users/Ornicha/Desktop/OpenCV/image/pill2.jpg",1);
     imshow(window_name,src);
     setMouseCallback( window_name, onMouse, 0 );
     waitKey();  
