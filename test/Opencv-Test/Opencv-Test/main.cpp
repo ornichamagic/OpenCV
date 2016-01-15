@@ -42,7 +42,7 @@ using namespace std;
 //    cv::waitKey(0);                                          // Wait for a keystroke in the window
 //    return 0;
 //}
-
+///
 
 char window_name[30] = "HSV Segmentation";
 Mat src;
