@@ -92,6 +92,97 @@ static void onMouse( int event, int x, int y, int f, void* ){
     sprintf(name,"Y=%d",y);
     putText(image,name, Point(25,340) , FONT_HERSHEY_SIMPLEX, .7, Scalar(0,0,255), 2,8,false );
     
+    if(S == 0)
+    {
+        if(V == 255)
+        {
+        cout << " Color: White" << endl;
+        }
+        else if(V == 0)
+        {
+            cout << " Color: Black" << endl;
+        }
+    }
+    
+    else if (H >= 0 && H <= 3)
+    {
+        cout << " Color: Red" << endl;
+    }
+    else if (H >= 4 && H <= 10)
+    {
+        cout << " Color: Red-Orange" << endl;
+    }
+    else if (H >= 11 && H <=12 )
+    {
+        cout << " Color: Orange" << endl;
+    }
+    else if (H >= 13 && H < 20)
+    {
+        cout << " Color: Orange-Brown" << endl;
+    }
+    else if (H >= 21 && H < 25)
+    {
+        cout << " Color: Orange-Yellow" << endl;
+    }
+    else if (H >= 26 && H < 30)
+    {
+        cout << " Color: Yellow" << endl;
+    }
+    else if (H >= 31 && H < 40)
+    {
+        cout << " Color: Yellow-Green" << endl;
+    }
+    else if (H >= 41 && H < 70)
+    {
+        cout << " Color: Green" << endl;
+    }
+    else if (H >= 71 && H < 85)
+    {
+        cout << " Color: Green-Cyan" << endl;
+    }
+    else if (H >= 86 && H < 100)
+    {
+        cout << " Color: Cyan" << endl;
+    }
+    else if (H >= 101 && H < 110)
+    {
+        cout << " Color: Cyan-Blue" << endl;
+    }
+    else if (H >= 111 && H < 130)
+    {
+        cout << " Color: Blue" << endl;
+    }
+    else if (H >= 131 && H < 140)
+    {
+        cout << " Color: Violet" << endl;
+    }
+    else if (H >= 141 && H < 160)
+    {
+        cout << " Color: Magenta" << endl;
+    }
+    else if (H >= 161 && H < 167)
+    {
+        cout << " Color: Magenta-Pink" << endl;
+    }
+    else if (H >= 168 && H < 175)
+    {
+        cout << " Color: Pink" << endl;
+    }
+    else if (H >= 176 && H < 177)
+    {
+        cout << " Color: Pink-Red" << endl;
+    }
+    else if (H >= 176 && H < 177)
+    {
+        cout << " Color: Pink-Red" << endl;
+    }
+    else if (H >= 178 && H < 180)
+    {
+        cout << " Color: Red" << endl;
+    }
+
+    
+    
     //imwrite("hsv.jpg",image);
     imshow( window_name, image );
 }
@@ -99,7 +190,7 @@ static void onMouse( int event, int x, int y, int f, void* ){
 
 
 int main(){
-    src = imread("/Users/Ornicha/Desktop/OpenCV/image/pill2.jpg",1);
+    src = imread("/Users/Ornicha/Desktop/OpenCV/image/pill.jpg",1);
     imshow(window_name,src);
     setMouseCallback( window_name, onMouse, 0 );
     waitKey();  
