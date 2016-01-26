@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		508C57E91C3F829B000655F7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 508C57E81C3F829B000655F7 /* main.cpp */; };
+		50A60FDF1C5634500091226E /* libopencv_highgui.2.4.11.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A60FDC1C5634500091226E /* libopencv_highgui.2.4.11.dylib */; };
+		50A60FE01C5634500091226E /* libopencv_imgproc.2.4.11.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A60FDD1C5634500091226E /* libopencv_imgproc.2.4.11.dylib */; };
+		50A60FE11C5634500091226E /* libopencv_core.2.4.11.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A60FDE1C5634500091226E /* libopencv_core.2.4.11.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +30,9 @@
 		508C57E81C3F829B000655F7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		508C57EF1C3F83F6000655F7 /* fruits.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fruits.jpg; sourceTree = "<group>"; };
 		508C57F31C3F8754000655F7 /* truck4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = truck4.png; sourceTree = "<group>"; };
+		50A60FDC1C5634500091226E /* libopencv_highgui.2.4.11.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_highgui.2.4.11.dylib; sourceTree = "<group>"; };
+		50A60FDD1C5634500091226E /* libopencv_imgproc.2.4.11.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_imgproc.2.4.11.dylib; sourceTree = "<group>"; };
+		50A60FDE1C5634500091226E /* libopencv_core.2.4.11.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_core.2.4.11.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +40,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50A60FE01C5634500091226E /* libopencv_imgproc.2.4.11.dylib in Frameworks */,
+				50A60FE11C5634500091226E /* libopencv_core.2.4.11.dylib in Frameworks */,
+				50A60FDF1C5634500091226E /* libopencv_highgui.2.4.11.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +52,9 @@
 		508C57DC1C3F829B000655F7 = {
 			isa = PBXGroup;
 			children = (
+				50A60FDC1C5634500091226E /* libopencv_highgui.2.4.11.dylib */,
+				50A60FDD1C5634500091226E /* libopencv_imgproc.2.4.11.dylib */,
+				50A60FDE1C5634500091226E /* libopencv_core.2.4.11.dylib */,
 				508C57E71C3F829B000655F7 /* Opencv-Test */,
 				508C57E61C3F829B000655F7 /* Products */,
 				508C57EF1C3F83F6000655F7 /* fruits.jpg */,
@@ -212,26 +224,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = /usr/local/include;
-				LIBRARY_SEARCH_PATHS = /usr/local/lib;
-				OTHER_LDFLAGS = (
-					"-lopencv_calib3d",
-					"-lopencv_core",
-					"-lopencv_features2d",
-					"-lopencv_flann",
-					"-lopencv_highgui",
-					"-lopencv_imgcodecs",
-					"-lopencv_imgproc",
-					"-lopencv_ml",
-					"-lopencv_objdetect",
-					"-lopencv_photo",
-					"-lopencv_shape",
-					"-lopencv_stitching",
-					"-lopencv_superres",
-					"-lopencv_ts",
-					"-lopencv_video",
-					"-lopencv_videoio",
-					"-lopencv_videostab",
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					"$(PROJECT_DIR)",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -240,26 +237,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = /usr/local/include;
-				LIBRARY_SEARCH_PATHS = /usr/local/lib;
-				OTHER_LDFLAGS = (
-					"-lopencv_calib3d",
-					"-lopencv_core",
-					"-lopencv_features2d",
-					"-lopencv_flann",
-					"-lopencv_highgui",
-					"-lopencv_imgcodecs",
-					"-lopencv_imgproc",
-					"-lopencv_ml",
-					"-lopencv_objdetect",
-					"-lopencv_photo",
-					"-lopencv_shape",
-					"-lopencv_stitching",
-					"-lopencv_superres",
-					"-lopencv_ts",
-					"-lopencv_video",
-					"-lopencv_videoio",
-					"-lopencv_videostab",
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					"$(PROJECT_DIR)",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -283,6 +265,7 @@
 				508C57EE1C3F829B000655F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
